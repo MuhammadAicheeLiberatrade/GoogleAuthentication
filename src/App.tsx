@@ -1,11 +1,21 @@
 import React from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { Login } from './Components/Login';
+import Main from './Components/Main';
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
+	return (
+		<div className="App">
+			<Router>
+				<div className="container">
+					<Switch>
+						<Route exact path="/" component={Login} />
+						<Route path="/main" component={Main} />
+					</Switch>
+				</div>
+			</Router>
+			{/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
@@ -18,9 +28,9 @@ function App() {
         >
           Learn React
         </a>
-      </header>
-    </div>
-  );
+      </header> */}
+		</div>
+	);
 }
 
 export default App;
