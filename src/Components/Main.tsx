@@ -46,7 +46,7 @@ export default class Main extends Component<MyState> {
 								{UserData.name}
 							</a>
                             
-								<Button color="google plus" style={{marginTop:'1rem'}} onClick={()=>{this.logout()}}>
+								<Button color="google plus" style={{marginTop:'1.5rem'}} onClick={()=>{this.logout()}}>
 									<Icon name="google plus" /> Logout
 								</Button>
 							
